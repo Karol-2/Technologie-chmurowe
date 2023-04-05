@@ -1,0 +1,1 @@
+console.log(" node js witam państwa bardzo serdecznie")
