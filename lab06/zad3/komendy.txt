@@ -1,0 +1,9 @@
+docker build -t frontend ./frontend  
+docker build -t backend ./backend     
+docker build -t database ./database   
+docker network create frontend_network
+docker network create backend_network
+docker run -itd --name frontend --network frontend_network -p 8080:80 frontend
+docker run -itd --name backend --network backend_network -p 3000:3000 backend
+docker run -itd --name database --network backend_network database
+docker network connect frontend_network backend
