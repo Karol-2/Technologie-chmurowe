@@ -1,0 +1,19 @@
+version: '1.0'
+services:
+  db:
+    container_name: db
+    image: mongo:4.1.13
+    ports:
+    - "27019:27017"
+    volumes:
+    - mongo-data:/data/db
+    networks:
+    - net_A
+
+networks:
+    net_A:
+        external: false
+        name: net_A
+
+volumes:
+  mongo-data:
