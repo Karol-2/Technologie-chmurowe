@@ -1,0 +1,8 @@
+FROM alpine:latest
+RUN apk --no-cache add curl git npm
+ARG GIT_REPO
+RUN git clone https://github.com/Karol-2/empty-react-app.git /app
+WORKDIR /app/my-app
+RUN npm install
+EXPOSE 3000
+
