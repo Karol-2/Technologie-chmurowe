@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  app:
+  aplikacja:
     image: zad1:latest
     ports:
       - "8080:5000"
