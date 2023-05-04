@@ -4,5 +4,6 @@ ARG GIT_REPO
 RUN git clone https://github.com/Karol-2/empty-react-app.git /app
 WORKDIR /app/my-app
 RUN npm install
+RUN npm run build
 EXPOSE 3000
-
+CMD ["npm","start"]

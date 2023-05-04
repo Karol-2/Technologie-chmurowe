@@ -1,0 +1,21 @@
+Zadanie 1 (0.1 pkt)
+
+Stwórz prosty Dockerfile, który będzie tworzył obraz na bazie oficjalnego obrazu Alpine Linux i wyświetlał wiadomość Witaj w Dockerze!.
+
+Zadanie 2 (0.2 pkt)
+
+Stwórz Dockerfile, który będzie tworzył obraz na bazie oficjalnego obrazu Node.js. Skopiuj folder "app" (zakładając, że znajduje się on obok Dockerfile) do obrazu, zainstaluj zależności, ustaw zmienną środowiskową i uruchom aplikację.
+
+Zadanie 3 (0.2 pkt)
+
+Stwórz Dockerfile, który będzie tworzył obraz na bazie oficjalnego obrazu Python. Ustaw w nim zmienną ARG, aby można było podać wersję Pythona przy budowaniu obrazu. Skopiuj folder myapp(zakładając, że znajduje się on obok Dockerfile) do obrazu, zainstaluj zależności z pliku requirements.txt i uruchom aplikację.
+
+Zadanie 4 (0.2 pkt)
+
+Stwórz Dockerfile, który będzie tworzył obraz na bazie oficjalnego obrazu Alpine. Użyj argumentów, aby ustawić wersję Pythona oraz port, na którym będzie działać serwer. Zastosuj zmienne środowiskowe, aby przechować te wartości. Użyj woluminów do przechowywania danych aplikacji.
+
+Zadanie 5 (0.3 pkt)
+
+Stwórz Dockerfile, który będzie tworzył obraz aplikacji Node.js z wykorzystaniem nginx. Wykorzystaj budowanie wieloetapowe: w pierwszym etapie, na obrazie Ubuntu, zainstaluj zależności i zbuduj aplikację, a w drugim etapie użyj obrazu Nginx, skopiuj wynikowy kod i skonfiguruj serwer Nginx do obsługi aplikacji.
+
+Wskazówka: Odpalenie serwera nginx: nginx -g deamon off;

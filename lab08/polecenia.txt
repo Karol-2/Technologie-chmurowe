@@ -1,0 +1,19 @@
+Zadanie 1 (0.3 pkt)
+
+Stwórz prostą aplikację Flask w Pythonie, która zwraca powitanie przy użyciu jednego punktu końcowego. Aplikacja powinna być skonteneryzowana za pomocą Docker, z plikiem Dockerfile definiującym proces budowania obrazu i plikiem requirements.txt zawierającym zależności. Następnie, utwórz plik docker compose, który będzie zarządzał aplikacją w pliku docker-compose.yml. Plik ten powinien mieć zdefiniowany serwis, porty i polecenie do uruchomienia. Po uruchomieniu serwisu za pomocą polecenia docker-compose, aplikacja jest powinna być dostępna pod adresem "http://localhost:8080" w przeglądarce.
+
+Rozwiązanie umieść w repozytorium.
+
+
+Zadanie 2 (0.5 pkt)
+
+Stwórz prostą aplikację express w JavaScript, która będzie służyć do dodawania i odczytywania wiadomości z serwera Redis. Aplikacja będzie konteneryzowana za pomocą Docker, z plikiem Dockerfile definiującym proces budowy obrazu i plikiem package.json zawierającym zależności. Docker Compose będzie wykorzystywane do zarządzania aplikacją i serwerem Redis za pomocą pliku docker-compose.yml, który definiuje serwisy, porty i polecenia do uruchomienia. Po uruchomieniu serwisów za pomocą polecenia docker-compose up --build, API będzie dostępne pod adresem http://localhost:3000 w przeglądarce. 
+
+Rozwiązanie umieść w repozytorium.
+
+
+Zadanie 3 (0.7 pkt)
+
+Stwórz prostą aplikację express w JavaScript, która będzie służyć do dodawania i odczytywania wiadomości z serwera Redisoraz do dodania użytkowników w bazie PostgreSQL. Aplikacja będzie konteneryzowana za pomocą Docker, z plikiem Dockerfile definiującym proces budowy obrazu i plikiem package.json zawierającym zależności. Docker Compose będzie wykorzystywane do zarządzania aplikacją, serwerem Redis, bazą danych PostgreSQL i serwerem Nginx za pomocą pliku docker-compose.yml, który definiuje serwisy, porty, polecenia, nazwę użytkownika i hasło do bazy danych. Po uruchomieniu serwisów za pomocą polecenia docker-compose up --build, API będzie dostępne pod adresem "http://localhost" w przeglądarce (na porcie 80 w serwerze nginx).
+
+Rozwiązanie umieść w repozytorium.

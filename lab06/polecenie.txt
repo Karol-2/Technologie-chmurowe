@@ -1,0 +1,17 @@
+Zadanie 1 (0.2 pkt)
+
+Skonfiguruj sieć typu bridge w Docker o nazwie my_bridge i przypisz do niej adres IP 192.168.1.1/24.
+
+Następnie utwórz kontener i przypisz go do sieci my_bridge. Przetestuj połączenie sieciowe.
+
+Zadanie 2 (0.3 pkt)
+
+Skonfiguruj dwa mikroserwisy, korzystając z wbudowanych obrazów nginx lub nodejs i np. mysql o nazwach, web i db, podłączone do sieci my_network, w której web będzie miał dostęp do db pod adresem db:3306 lub innym porcie (w zależności od użytej bazy).
+
+Następnie skonfiguruj nginx lub nodejs tak, aby po wpisaniu adresu IP kontenera web, w logach aplikacji powinna być zawarta informacja o połączeniu z bazą danych.
+
+Zadanie 3 (0.5 pkt)
+
+Skonfiguruj aplikację składającą się z trzech mikroserwisów, frontend, backend i database, które będą komunikować się ze sobą przez dwie sieci Docker: frontend_network i backend_network. Sieć frontend_network będzie używana przez serwer WWW frontend i serwer API backend, natomiast sieć backend_network będzie używana przez serwer API backend i serwer baz danych database. W sieci backend_network dostęp do bazy danych database będzie dostępny tylko dla serwera API backend.
+
+Utwórz skrypt, który sprawdzi poprawność połączenia tych serwisów. Obrazy kontenerów mogą być dowolne, mogą to być rzecz jasna własne obrazy aplikacji.

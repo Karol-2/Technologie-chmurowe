@@ -1,0 +1,61 @@
+Zadanie 1 (0.2 pkt)
+
+Baza danych
+
+Stwórz plik docker compose, który będzie odpalał bazę mongo w wersji 4.1.13.
+
+Kontener powinien:
+
+- posiadać container_name: db
+
+- znajdować się w sieci o nazwie net_A,
+
+- przechowywać dane w volumenie (podpowiedź: dane w mongo zapisywane są w ścieżce /data/db)
+
+- forwardować port 27017 w kontenerze na port 27019 na hoście
+
+Korzystając z mongo CLI lub wybranego GUI stwórz kolekcję users oraz dodaj tam obiekt:
+
+{
+
+    "name" : "user",
+
+    "last_name" : "kowalski"
+
+}
+
+
+Zadanie 2 (0.6 pkt)
+
+Serwer API
+
+Stwórz API (używając express lub flask) które wystawi endpoint GET /users zwracający wszystkie obiekty z kolekcji users z bazy danych z zadania 1.
+
+Stwórz Dockerfile odpowiedzialny za zbudowanie docker image tej aplikacji (powtórka z poprzednich zajęć).
+
+Wrzuć utworzony obraz do serwisu Docker Hub.
+
+Dodaj aplikację do pliku docker compose stworzonym w zadaniu 1.
+
+Kontener powinien:
+
+- posiadać container_name: server
+
+- znajdować się w sieci net_A,
+
+- nie odpalać się jeżeli kontener z mongo nie wstanie (depends_on) 
+
+- wystawiać API na porcie 3003 na hoście
+
+
+Zadanie 3 (0.2 pkt)
+
+Wyciąganie konfiguracji do pliku .env
+
+Stwórz plik .env w którym umieścisz zmienne zawierające:
+
+- wersję obrazu mongo (np. MONGO_VERSION=4.1.12)
+
+- port na którym mongo dostępne na hoscie (np. MONGO_PORT=27019)
+
+Zmień plik docker compose z poprzednego tak aby używał tych zmiennych.
