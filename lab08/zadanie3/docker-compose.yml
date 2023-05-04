@@ -1,0 +1,36 @@
+version: '21.37'
+
+services:
+  redis:
+    image: redis:alpine
+  
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydb
+
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      PGHOST: db
+      PGUSER: myuser
+      PGPASSWORD: mypassword
+      PGDATABASE: mydb
+    depends_on:
+      - redis
+      - db
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
