@@ -1,0 +1,2 @@
+docker buildx build --platform linux/amd64 -t 26karol26/zad3:linux .
+docker push 26karol26/zad3:linux
