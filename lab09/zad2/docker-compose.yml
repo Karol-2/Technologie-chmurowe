@@ -1,15 +1,22 @@
-version: "3.9"
+version: '3.10'
 services:
   api:
     build:
-      context: ./api
-      dockerfile: Dockerfile
+      context: /api/.
     ports:
-      - "3000:3000"
-    environment:
-      MONGODB_URL: "mongodb://db:27017/mydb"
+      - 3000:3000
+    depends_on:
+      - db
+    networks:
+      - network
+    platform: linux/arm64/v8
   db:
-    image: mongo:latest
-    arch: amd64
+    image: mongo
     ports:
-      - "27017:27017"
+      - 27019:27017
+    networks:
+      - network
+    platform: linux/amd64
+
+networks:
+  network:
