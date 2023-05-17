@@ -1,0 +1,37 @@
+Zadanie 1 (0.5 pkt)
+
+Zadanie polega na stworzeniu obrazu Docker, który będzie zawierał aplikację typu REST. Obraz powinien również zawierać skonfigurowany healthcheck, który będzie regularnie sprawdzał, czy aplikacja jest w pełni funkcjonalna.
+
+Pierwszym krokiem jest napisanie aplikacji typu REST. Możemy użyć dowolnego języka programowania i frameworka. Należy upewnić się, że aplikacja działa poprawnie i udostępnia kilka prostych endpointów.
+
+Następnie należy stworzyć plik Dockerfile, w którym zostaną określone potrzebne zależności, skonfigurowane środowisko i uruchomienie aplikacji. W pliku Dockerfile należy także dodać instrukcję HEALTHCHECK, która będzie regularnie testować, czy aplikacja jest w pełni funkcjonalna.
+
+Ostatnim krokiem będzie utworzenie pliku docker-compose.yml, w którym zdefiniujemy usługę dla utworzonego wcześniej kontenera. Usługa powinna zawierać kilka argumentów takich jak:
+
+Polecenie do testowania zdrowia aplikacji
+
+Czas w sekundach pomiędzy kolejnymi testami
+
+Maksymalny czas oczekiwania na odpowiedź od aplikacji
+
+Liczba powtórzeń testu, zanim aplikacja zostanie uznana za niezdrową
+
+
+Zadanie 2 (0.5 pkt)
+
+Stwórz aplikację składająca się z dwóch usług, które będą działały na różnych architekturach. Aplikacja powinna składać się z:
+
+Serwera API opartego na Node.js, działającego na architekturze arm64.
+Bazy danych MongoDB, działającej na architekturze amd64.
+Utwórz folder api i wewnątrz tego folderu utwórz plik Dockerfile. W pliku Dockerfile zdefiniuj obraz dla serwera API opartego na Node.js, działającego na architekturze arm64.
+
+W pliku docker-compose.yml zdefiniuj usługi dla serwera API oraz bazy danych MongoDB.
+
+
+Zadanie 3 (1 pkt)
+
+Stwórz aplikację konsolową, która będzie działać na systemach Linux i Windows. Aplikacja powinna wyświetlać wiadomość powitalną w zależności od systemu operacyjnego, na którym jest uruchomiona.
+
+Przygotuj plik Dockerfile dla aplikacji, uwzględniając różne bazy obrazów dla systemów Linux i Windows.
+
+Zbuduj i opublikuj wieloarchitekturowe obrazy Docker w serwisie Docker Hub, używając narzędzia Docker Buildx lub tworząc ręcznie manifest obrazu.

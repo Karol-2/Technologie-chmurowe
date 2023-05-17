@@ -1,0 +1,44 @@
+Zadanie 1 (0.5 pkt)
+
+Stwórz klaster Kubernetes na swoim komputerze korzystając z platformy Docker for Desktop.
+
+Utwórz plik Dockerfile, który będzie zawierał kod aplikacji Hello World napisanej w dowolnym języku programowania i bibliotekami potrzebnymi do jej uruchomienia.
+
+Zbuduj obraz aplikacji Hello World za pomocą Dockerfile i przesłać go do publicznego lub prywatnego repozytorium obrazów.
+
+Utwórz manifest pod, który będzie zarządzał jedną repliką podów, korzystając z obrazu z repozytorium.
+
+Użyj kubectl, aby zainstalować pod w klastrze.
+
+Użyj kubectl, aby wyświetlić listę podów w klastrze.
+
+Użyj kubectl, aby wejść do konsoli pod, aby zobaczyć działanie aplikacji "Hello World"
+
+Zmodyfikuj kod aplikacji Hello World i ponownie zbuduj i wypchnij obraz do repozytorium.
+
+Użyj kubectl, aby zaktualizować pod na nowszą wersję aplikacji.
+
+Sprawdź, czy aktualizacja przebiegła pomyślnie oraz czy aplikacja Hello World działa bezproblemowo po aktualizacji.
+
+
+Zadanie 2 (1 pkt)
+
+Stwórz klaster Kubernetes na swoim komputerze korzystając z platformy Docker for Desktop.
+
+Utwórz plik Dockerfile, bazując na obrazie Nginx, który będzie jako strona startowa zawierała stronę, zawierającą Twoje imię i nazwisko.
+
+Zbuduj na podstawie powyższego pliku Dockerfile obraz i wrzuć go do serwisu Docker Hub.
+
+Utwórz manifest Deployment dla aplikacji Nginx, który będzie zarządzał trzema replikami podów.
+
+Utwórz manifest Service, który będzie udostępniał aplikację Nginx przez protokół HTTP na porcie 80.
+
+Użyj kubectl do zainstalowania aplikacji Nginx w klastrze.
+
+Sprawdź, czy aplikacja jest dostępna przez przeglądarkę pod adresem http://<nodes-ip>:<service-port>
+
+Zmodyfikuj Deployment, aby zwiększyć liczbę replik do 5.
+
+Użyj kubectl, aby zaktualizować Deployment
+
+Sprawdź, czy liczba replik zwiększyła się w klastrze.
