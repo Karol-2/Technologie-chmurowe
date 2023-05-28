@@ -1,0 +1,12 @@
+docker build -t 26karol26/mikroserwis_a:latest ./mikroserwis_a
+docker push 26karol26/mikroserwis_a:latest
+docker build -t 26karol26/mikroserwis_b:latest ./mikroserwis_b
+docker push 26karol26/mikroserwis_b:latest
+
+kubectl apply -f deployment_a.yaml
+kubectl apply -f service_a.yaml
+kubectl apply -f deployment_b.yaml
+kubectl apply -f service_b.yaml
+
+kubectl get pods
+kubectl get services

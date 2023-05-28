@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mikroserwis-b-deployment
+  labels:
+    app: mikroserwis-b
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mikroserwis-b
+  template:
+    metadata:
+      labels:
+        app: mikroserwis-b
+    spec:
+      containers:
+        - name: mikroserwis-b
+          image: 26karol26/mikroserwis_b:latest
+          ports:
+            - containerPort: 3000
