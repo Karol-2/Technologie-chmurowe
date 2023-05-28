@@ -19,3 +19,10 @@ spec:
           image: 26karol26/mikroserwis_b:baza 
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: redis-data
+              mountPath: /data
+      volumes:
+        - name: redis-data
+          persistentVolumeClaim:
+            claimName: redis-pvc
